@@ -1,121 +1,102 @@
-.container {
+/* Start Wrapper for background */
+.wrapper {
+  background-image: url("/background.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 100vh;
-  padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   height: 100vh;
-}
-
-.main {
-  padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer {
+  padding: 0 0.5rem;
   width: 100%;
-  height: 100px;
-  border-top: 1px solid #eaeaea;
+}
+
+/* Start Container */
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+/* Start Hero Section */
+.hero {
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+.hero .desc {
+  max-width: 60%;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.hero .desc h2 {
+  font-size: 2rem;
+  font-weight: 900;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
+.hero .desc h2.arTitle {
+  direction: rtl;
   text-align: center;
+  font-family: "Boahmed AlHarf";
 }
 
-.description {
-  line-height: 1.5;
-  font-size: 1.5rem;
+.hero .desc .form {
+  margin-top: 80px;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+.hero .desc .form h3 {
+  text-decoration: underline;
+  margin: 10px 0;
 }
 
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-  margin-top: 3rem;
+.hero .desc .form input {
+  width: 500px;
+  font-size: 1.2rem;
+  padding: 16px;
+  background-image: url("/play.svg");
+  background-repeat: no-repeat;
+  background-position: 98% 50%;
 }
 
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  width: 45%;
+.hero .desc .form p {
+  margin: 10px 0;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.hero .img {
+  width: 50%;
 }
 
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+.hero .img img {
+  width: 100%;
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
+/* start Responsive Rules */
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
+@media (max-width: 767px) {
+  .wrapper {
+    display: flex;
+    align-items: center;
+  }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
+  .container {
+    width: 85%;
+  }
+
+  .hero {
     flex-direction: column;
+  }
+
+  .hero .desc {
+    max-width: 100%;
+  }
+
+  .hero .desc h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero .img {
+    display: none;
+  }
+
+  .hero .desc .form input {
+    width: 100%;
   }
 }
